@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Selectors Demo</title>
+    <style>
+        * {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    color: #0a1f44; 
+    text-align: center;
+    margin-top: 35px;
+    font-weight: 700;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+    letter-spacing: 1px;
+}
+
+#intro {
+    background: linear-gradient(90deg, #fdfcfb, #e2d1c3); 
+    padding: 22px;
+    border-bottom: 3px solid #d4af37; 
+    box-shadow: 0 4px 12px rgba(10,31,68,0.15);
+    width: 85%;
+    margin: 20px auto;
+}
+
+.highlight {
+    background: #ffffff;
+    border: 2px solid #d4af37;
+    padding: 20px;
+    margin: 25px auto;
+    width: 85%;
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgba(10,31,68,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.highlight:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(10,31,68,0.3);
+}
+
+.highlight p {
+    color: #444;
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+footer {
+    background-color: #012746 !important; 
+    color: #fff !important;
+    text-align: center !important;
+    padding: 1.2rem !important;
+    font-size: 1rem !important;
+    margin-top: 40px;
+    letter-spacing: 1px;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 -4px 12px rgba(0,0,0,0.4);
+}
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Selectors Showcase</h1>
+    <h2>Elegant Color Palette</h2>
+
+    <div id="intro">
+        <p>This section is styled using an <b>ID selector</b></p>
+    </div>
+
+    <div class="highlight">
+        <p>This paragraph is inside a class-styled box using a <b>descendant selector</b>.</p>
+        <p>Notice the soft shadows and warm tones from the palette.</p>
+    </div>
+
+    <footer style="background-color: #012746; color: #fff; text-align: center; padding: 1rem; font-size: 1rem;">
+        SHIVAM KUMAR  &nbsp; | &nbsp; ERP - RU-25-11365
+    </footer>
+
+</body>
+
+</html>

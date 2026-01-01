@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table-Based Layout Demo</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 40px;
+            background: linear-gradient(135deg, #e3f2fd, #f3e5f5);
+            color: #424242;
+            line-height: 1.6;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1976d2;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            border-collapse: collapse;
+            background-color: #ffffff;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+        }
+
+        caption {
+            font-size: 1.8em;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #388e3c;
+            background: linear-gradient(90deg, #c8e6c9, #a5d6a7);
+            padding: 15px;
+            border-bottom: 2px solid #4caf50;
+        }
+
+        th,
+        td {
+            padding: 15px 20px;
+            text-align: left;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        th {
+            background: linear-gradient(90deg, #42a5f5, #1e88e5);
+            color: #ffffff;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        
+        .center {
+            text-align: center;
+        }
+
+        .right {
+            text-align: right;
+        }
+
+        tbody tr:nth-child(odd) {
+            background-color: #f9f9f9;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #e8f5e8;
+        }
+
+        
+        tbody tr:hover {
+            background-color: #e3f2fd;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        p {
+            text-align: center;
+            color: #616161;
+            font-size: 1.1em;
+            margin-top: 30px;
+        }
+
+        code {
+            background-color: #e8eaf6;
+            color: #3f51b5;
+            padding: 3px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Table-Based Layout with Merged Cells, Alignment, and Caption</h1>
+
+    <table>
+        <caption>Weekly Schedule Example</caption>
+        <thead>
+            <tr>
+                <th rowspan="2">Day</th>
+                <th colspan="2">Morning</th>
+                <th colspan="2">Afternoon</th>
+            </tr>
+            <tr>
+                <th>8-10 AM</th>
+                <th>10-12 PM</th>
+                <th>1-3 PM</th>
+                <th>3-5 PM</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Monday</td>
+                <td>Math</td>
+                <td>Science</td>
+                <td>History</td>
+                <td>PE</td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td colspan="2" class="center">Assembly</td>
+                <td>Art</td>
+                <td>Music</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td>English</td>
+                <td>Math</td>
+                <td rowspan="2">Project Work</td>
+                <td>Science</td>
+            </tr>
+            <tr>
+                <td>Thursday</td>
+                <td>History</td>
+                <td>PE</td>
+                <td>Art</td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td colspan="4" class="center">Field Trip</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>This table demonstrates merged cells using <code>rowspan</code> and <code>colspan</code>, text alignment (left,
+        center, right), and a caption.</p>
+
+    <footer style="background-color: #012746; color: #fff; text-align: center; padding: 1rem; font-size: 1rem;">
+        SHIVAM KUMAR  &nbsp; | &nbsp; ERP - RU-25-11365
+    </footer>
+</body>
+
+</html>
