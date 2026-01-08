@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Links, Images, and Lists Demo</title>
+    <style>
+        /* styles.css */
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header,
+        section,
+        footer {
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: #e74c3c;
+            margin-top: 40px;
+        }
+
+        h3 {
+            color: #27ae60;
+            margin-top: 20px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        img {
+            display: block;
+            margin: 20px auto;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+        }
+
+        ul,
+        ol {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: disc;
+        }
+
+        ol {
+            list-style-type: decimal;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        footer {
+            text-align: center;
+            font-style: italic;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>HTML Links, Images, and Lists Demonstration</h1>
+    </header>
+
+    <section id="links">
+        <h2>HTML Links</h2>
+        <p>Links allow navigation to other pages or sections. Here are some examples:</p>
+        <ul>
+            <li><a href="https://www.google.com" target="_blank">External Link to Google</a></li>
+            <li><a href="#images">Internal Link to Images Section</a></li>
+            <li><a href="mailto:shivam.kumar.kunwar@rungta.org">Email Link</a></li>
+        </ul>
+    </section>
+
+    <section id="images">
+        <h2>HTML Images</h2>
+        <p>Images can be embedded using the &lt;img&gt; tag. Here's an example:</p>
+        <img src="img.avif" alt="img" width="300"
+            height="200">
+        <p>This is a placeholder image for demonstration purposes.</p>
+    </section>
+
+    <section id="lists">
+        <h2>HTML Lists</h2>
+        <p>Lists organize content. Below are examples of unordered, ordered, and nested lists.</p>
+
+        <h3>Unordered List</h3>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+
+        <h3>Ordered List</h3>
+        <ol>
+            <li>First item</li>
+            <li>Second item</li>
+            <li>Third item</li>
+        </ol>
+
+        <h3>Nested List (Unordered inside Ordered)</h3>
+        <ol>
+            <li>Main Item 1
+                <ul>
+                    <li>Sub-item 1.1</li>
+                    <li>Sub-item 1.2</li>
+                </ul>
+            </li>
+            <li>Main Item 2
+                <ul>
+                    <li>Sub-item 2.1</li>
+                    <li>Sub-item 2.2</li>
+                </ul>
+            </li>
+        </ol>
+
+        <h3>Nested List (Ordered inside Unordered)</h3>
+        <ul>
+            <li>Category A
+                <ol>
+                    <li>Step 1</li>
+                    <li>Step 2</li>
+                </ol>
+            </li>
+            <li>Category B
+                <ol>
+                    <li>Step 1</li>
+                    <li>Step 2</li>
+                </ol>
+            </li>
+        </ul>
+    </section>
+
+    <footer style="background-color: #012746; color: #fff; text-align: center; padding: 1rem; font-size: 1rem;">
+        SHIVAM KUMAR  &nbsp; | &nbsp; ERP - RU-25-11365
+    </footer>
+</body>
+
+</html>

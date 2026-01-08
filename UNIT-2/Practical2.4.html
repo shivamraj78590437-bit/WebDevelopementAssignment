@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Responsive Web Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f1faee;
+            color: #1d3557;
+            padding: 1rem;
+        }
+
+        header {
+            background-color: #a8dadc;
+            padding: 1.5rem;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .card {
+            background-color: #ffffff;
+            padding: 1rem;
+            border: 1px solid #a8dadc;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h2 {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .card p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        @media (min-width: 600px) {
+            .container {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            .card {
+                flex: 1 1 45%;
+            }
+        }
+
+        @media (min-width: 900px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            .card {
+                flex: 1 1 30%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Responsive Design with Modern Colors</h1>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <h2>Mobile First</h2>
+            <p>This layout starts with mobile styles and scales up using media queries.</p>
+        </div>
+        <div class="card">
+            <h2>Flexible Units</h2>
+            <p>We use rem, em, and % units to ensure adaptability across devices.</p>
+        </div>
+        <div class="card">
+            <h2>Fresh Palette</h2>
+            <p>Mint green, charcoal, and soft white create a clean and modern aesthetic.</p>
+        </div>
+    </div>
+
+    <footer style="background-color: #012746; color: #fff; text-align: center; padding: 1rem; font-size: 1rem;">
+        SHIVAM KUMAR  &nbsp; | &nbsp; ERP - RU-25-11365
+    </footer>
+
+</body>
+
+</html>

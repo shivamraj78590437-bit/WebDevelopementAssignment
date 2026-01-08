@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Child Nodes Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background:#f4f4f4;
+            padding:40px 10px;
+            display:flex;
+            justify-content:center;
+        }
+        .card {
+            background:#ffffff;
+            padding:20px 25px;
+            border-radius:8px;
+            box-shadow:0 2px 8px rgba(0,0,0,0.1);
+            max-width:480px;
+            width:100%;
+        }
+        h2 { margin-top:0; }
+        input {
+            padding:8px;
+            width:70%;
+            box-sizing:border-box;
+        }
+        button {
+            padding:8px 10px;
+            margin:6px 3px 0 0;
+            border:none;
+            border-radius:4px;
+            cursor:pointer;
+            background:#007bff;
+            color:white;
+            font-size:13px;
+        }
+        button:nth-of-type(2) { background:#28a745; }
+        button:nth-of-type(3) { background:#ffc107; color:#333; }
+        button:nth-of-type(4) { background:#dc3545; }
+        button:hover { opacity:0.9; }
+        ul { margin-top:15px; padding-left:20px; }
+        li { margin:4px 0; }
+        .hint { font-size:12px; color:#666; margin-top:6px; }
+    </style>
+</head>
+<body>
+<div class="card">
+    <h2>Create & Manipulate List Items</h2>
+
+    <input id="itemText" type="text" placeholder="Enter item text">
+    <button onclick="addItem()">Append</button>
+    <button onclick="modifyFirst()">Modify First</button>
+    <button onclick="removeLast()">Remove Last</button>
+    <button onclick="clearAll()">Clear All</button>
+
+    <div class="hint">
+        Type text and click <b>Append</b> to add an &lt;li&gt;.  
+        Use other buttons to modify or remove child nodes.
+    </div>
+
+    <h3>List:</h3>
+    <ul id="itemList"></ul>
+</div>
+
+<script>
+    function addItem() {
+        let text = document.getElementById("itemText").value.trim();
+        if (text === "") {
+            text = "New item";
+        }
+
+        let li = document.createElement("li");
+        li.textContent = text;
+
+        let list = document.getElementById("itemList");
+        list.appendChild(li);
+
+        document.getElementById("itemText").value = "";
+    }
+
+    function modifyFirst() {
+        let list = document.getElementById("itemList");
+        let first = list.firstElementChild;
+        if (first) {
+            first.textContent = "First item (modified)";
+        }
+    }
+
+    function removeLast() {
+        let list = document.getElementById("itemList");
+        let last = list.lastElementChild;
+        if (last) {
+            list.removeChild(last);
+        }
+    }
+
+    function clearAll() {
+        let list = document.getElementById("itemList");
+        while (list.firstChild) {
+            list.removeChild(list.firstChild);
+        }
+    }
+</script>
+</body>
+</html>

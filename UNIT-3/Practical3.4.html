@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Validation (onsubmit + oninput)</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 450px; margin: 40px auto; }
+        input { padding: 8px; margin: 6px 0; width: 100%; box-sizing: border-box; }
+        .error-border { border: 2px solid red; }
+        .ok-border { border: 2px solid green; }
+    </style>
+</head>
+<body>
+    <h2>Student Form</h2>
+
+    <form name="studentForm" onsubmit="return validateForm()">
+        <label>Name:</label><br>
+        <input type="text" id="fname" name="fname" 
+               placeholder="Enter name" oninput="liveNameCheck()"><br>
+
+        <label>Email:</label><br>
+        <input type="email" id="email" name="email" 
+               placeholder="Enter email" oninput="liveEmailCheck()"><br>
+
+        <label>Age:</label><br>
+        <input type="number" id="age" name="age" 
+               placeholder="Enter age" oninput="liveAgeCheck()"><br><br>
+
+        <input type="submit" value="Submit Form">
+    </form>
+
+    <script>
+        function validateForm() {
+            let name  = document.forms["studentForm"]["fname"].value.trim();
+            let email = document.forms["studentForm"]["email"].value.trim();
+            let age   = document.forms["studentForm"]["age"].value.trim();
+
+            if (name === "" || name.length < 2) {
+                alert("Name must be at least 2 characters.");
+                document.getElementById("fname").focus();
+                return false;
+            }
+
+            if (email === "" || !email.includes("@")) {
+                alert("Please enter a valid email (must contain @).");
+                document.getElementById("email").focus();
+                return false;
+            }
+
+            if (age === "" || age < 1 || age > 100) {
+                alert("Age must be between 1 and 100.");
+                document.getElementById("age").focus();
+                return false;
+            }
+
+            alert("Form submitted successfully!");
+            return true;
+        }
+
+        function liveNameCheck() {
+            let input = document.getElementById("fname");
+            let value = input.value.trim();
+
+            if (value === "") {
+                input.className = "";
+            } else if (value.length >= 2) {
+                input.className = "ok-border";
+            } else {
+                input.className = "error-border";
+            }
+        }
+
+        function liveEmailCheck() {
+            let input = document.getElementById("email");
+            let value = input.value.trim();
+
+            if (value === "") {
+                input.className = "";
+            } else if (value.includes("@")) {
+                input.className = "ok-border";
+            } else {
+                input.className = "error-border";
+            }
+        }
+
+        function liveAgeCheck() {
+            let input = document.getElementById("age");
+            let value = Number(input.value);
+
+            if (input.value === "") {
+                input.className = "";
+            } else if (value >= 1 && value <= 100) {
+                input.className = "ok-border";
+            } else {
+                input.className = "error-border";
+            }
+        }
+    </script>
+</body>
+</html>
